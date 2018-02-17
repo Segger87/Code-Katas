@@ -10,6 +10,7 @@ The abbreviated version of the word should have the first letter, then the numbe
 function abbreviate(string) {
   //uses regular expression to replace any words 4 characters or longer
   return string.replace(/\w{4,}/g, function abb(word) {
+    //returns index letter of word + the words length + the last character sliced off.
     return word[0] + (word.length - 2) + word.slice(-1);
   });
 }
